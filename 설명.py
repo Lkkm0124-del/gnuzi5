@@ -1,12 +1,12 @@
 import streamlit as st
 
 st.set_page_config(
-    page_title="🎮 미니 게임 천국",
+    page_title="🎮 미니게임 로비",
     page_icon="🎮",
     layout="centered"
 )
 
-st.title("🎮 미니 게임 천국")
+st.title("🎮 미니 게임 로비")
 
 st.markdown("""
 ## 환영합니다!
