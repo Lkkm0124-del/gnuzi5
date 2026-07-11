@@ -7,7 +7,7 @@ with st.expander("📖 게임 방법", expanded=True):
     st.markdown("""
     ### 게임 규칙
 
-    - 컴퓨터는 1~100 사이의 숫자를 하나 정합니다.
+    - 컴퓨터는 1~1000 사이의 숫자를 하나 정합니다.
     - 숫자를 입력하고 확인 버튼을 누릅니다.
     - 입력한 숫자가 정답보다 작으면
 
@@ -24,7 +24,7 @@ with st.expander("📖 게임 방법", expanded=True):
 MAX_TRY = 20
 
 if "answer" not in st.session_state:
-    st.session_state.answer = random.randint(1, 100)
+    st.session_state.answer = random.randint(1, 1000)
     st.session_state.count = 0
     st.session_state.game_over = False
 
@@ -33,7 +33,7 @@ st.write(f"⏳ 남은 기회 : {MAX_TRY - st.session_state.count}")
 guess = st.number_input(
     "숫자 입력",
     min_value=1,
-    max_value=100,
+    max_value=1000,
     step=1,
     disabled=st.session_state.game_over
 )
